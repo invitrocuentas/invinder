@@ -1,0 +1,1533 @@
+@font-face {
+  font-family: "BiennaleHeavyit";
+  src: url(../fonts/Biennale-Heavyit.otf);
+  font-display: swap;
+}
+@font-face {
+  font-family: "BiennaleBook";
+  src: url(../fonts/Biennale-Book.otf);
+  font-display: swap;
+}
+@font-face {
+  font-family: "BiennaleLight";
+  src: url(../fonts/Biennale-Light.otf);
+  font-display: swap;
+}
+@font-face {
+  font-family: "BiennaleBold";
+  src: url(../fonts/Biennale-Bold.otf);
+  font-display: swap;
+}
+@font-face {
+  font-family: "BiennaleBlack";
+  src: url(../fonts/Biennale-Black.otf);
+  font-display: swap;
+}
+@font-face {
+  font-family: "BiennaleRegular";
+  src: url(../fonts/Biennale-Regular.otf);
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: top;
+}
+
+section, header, footer, main {
+  width: 100%;
+}
+
+.contenedor {
+  width: min(88%, 1400px);
+  margin-inline: auto;
+}
+
+body {
+  font-size: 16px;
+}
+
+body, html {
+  overflow: hidden;
+}
+
+.wh-100vh {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.w-100, .wh-100 {
+  width: 100%;
+}
+
+.h-100, .wh-100 {
+  height: 100%;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.tracker main .option h2, .tracker_img, .presentation .contenido, .presentation .title {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.comment_front, .contact_box_body button,
+.contact_box_body [type=submit], .contact_box_body form div textarea, .contact_box_body form div input, .canvas_cards .card_content_inside, .canvas_cards .card_content, .canvas_cards .card_nav_inside, .canvas_cards .card_nav, .canvas_cards .card #photos .to_second_view, .canvas_cards .card #photos img, .canvas_cards .card #photos, .chat_button img, .chat_button::before, .tracker main .option::before, .tracker main .option, .presentation .contenido a::before {
+  transition: all 0.2s ease;
+}
+
+.presentation {
+  background: linear-gradient(180deg, #33C 0%, #000 100%);
+}
+.presentation .vector {
+  mix-blend-mode: soft-light;
+  width: 37.5%;
+  left: -100px;
+  bottom: -150px;
+}
+.presentation .logo {
+  display: block;
+  width: min(100%, 450px);
+  margin: 0 auto;
+  animation-name: logoUp;
+}
+.presentation .title {
+  animation: logoUp 1s ease-in-out 1.9s 1 forwards;
+}
+.presentation .contenido {
+  top: 56.5%;
+  width: min(100%, 650px);
+  margin: 0 auto;
+}
+.presentation .contenido div {
+  text-align: center;
+  color: #ffffff;
+}
+.presentation .contenido h1 {
+  font-family: "BiennaleBold";
+  margin: 18px auto 26px;
+}
+.presentation .contenido p {
+  font-family: "BiennaleLight";
+  font-size: 1.225rem;
+}
+.presentation .contenido p b {
+  margin-top: 26px;
+  display: block;
+  font-family: "BiennaleBold";
+  font-size: 1.4rem;
+}
+.presentation .contenido a {
+  display: block;
+  margin: 7vh auto 0;
+  width: 220px;
+  font-family: "BiennaleBold";
+  color: #3333CC;
+  background: #ffffff;
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 14px 20px;
+  border-radius: 30px;
+  line-height: 1.2em;
+  text-decoration: none;
+  position: relative;
+}
+.presentation .contenido a::before {
+  content: "";
+  position: absolute;
+  border: 1px solid #ffffff;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  border-radius: 30px;
+}
+.presentation .contenido a:hover::before {
+  width: 93%;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+@keyframes logoUp {
+  from {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  to {
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.canvas_cards .card #photos .to_first_view,
+.canvas_cards .card #photos button.splide__arrow, .canvas_cards, .tracker main, .tracker header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tracker_img {
+  width: min(100%, 230px);
+  height: auto;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  filter: drop-shadow(0px 6px 8px rgba(51, 51, 204, 0.35));
+}
+.tracker_img::before, .tracker_img::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  border-radius: 50%;
+  height: 100%;
+}
+.tracker_img::before {
+  margin-right: -230px;
+  animation: pulse1 4.5s ease-in-out 0s infinite;
+  background: #3333CC;
+  opacity: 0.3;
+}
+.tracker_img::after {
+  margin-left: -230px;
+  animation: pulse1 4.5s ease-in-out 2s infinite;
+  background: #3333CC;
+  opacity: 0.3;
+}
+.tracker_img img {
+  width: 100%;
+  height: 100%;
+}
+.tracker header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  height: 100px;
+  padding-block: 10px;
+}
+.tracker header img {
+  width: min(100%, 200px);
+}
+.tracker main {
+  height: 100vh;
+  padding-top: 100px;
+}
+.tracker main h1 {
+  color: #3333CC;
+  text-align: center;
+  font-family: "BiennaleBlack";
+  font-size: 2.5em;
+}
+.tracker main .choose {
+  width: 100%;
+  margin-top: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  min-height: 585px;
+}
+.tracker main .option {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+  max-width: 450px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 76.298px;
+}
+.tracker main .option h2 {
+  position: absolute;
+  font-size: 2.6em;
+  color: #ffffff;
+  font-family: "BiennaleBold";
+  text-align: center;
+  line-height: 1.25em;
+}
+.tracker main .option::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(51, 51, 204, 0.5) 0%, #000 100%);
+  mix-blend-mode: multiply;
+}
+.tracker main .option img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.tracker main .option:hover {
+  aspect-ratio: 9/11.5;
+}
+.tracker main .option:hover::before {
+  background: linear-gradient(180deg, #F2A933 0%, #000 100%);
+}
+
+@keyframes pulse1 {
+  0% {
+    transform: scale(1);
+  }
+  33% {
+    transform: scale(1.6);
+  }
+  66% {
+    transform: scale(2.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.invinder {
+  display: grid;
+  grid-template-columns: 500px 1fr 400px;
+}
+.invinder aside, .invinder main {
+  width: 100%;
+}
+.invinder #publicidad img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.invinder.two-cols {
+  grid-template-columns: 500px 1fr;
+}
+.invinder.two-cols main {
+  background: rgba(173, 204, 250, 0.1);
+  padding-inline: 2rem;
+}
+
+.chat {
+  width: 100%;
+  height: 100vh;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: grid;
+  grid-template-rows: 100px 1fr 11.5vh;
+}
+.chat > div {
+  width: 100%;
+  height: 100%;
+}
+.chat > div h2 {
+  font-family: "BiennaleBold";
+  font-size: 1.7em;
+  display: block;
+}
+.chat_profile {
+  display: flex;
+  align-items: center;
+  padding-inline: 5%;
+}
+.chat_profile_user {
+  width: 90%;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #000;
+}
+.chat_profile img {
+  width: 100%;
+  max-width: 160px;
+  margin: 0;
+}
+.chat_matches {
+  width: 100%;
+  height: 100%;
+  background: #F1F1F1;
+  padding-left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+.chat_matches img {
+  border-radius: 10px;
+}
+.chat_box {
+  display: grid;
+  grid-template-rows: 250px 1fr;
+}
+.chat_box > div {
+  height: 100%;
+}
+.chat_messages {
+  padding: 1rem 10% 1rem 5%;
+}
+.chat_persons {
+  overflow-y: scroll;
+  height: 90%;
+  max-height: 43vh;
+}
+.chat_persons::-webkit-scrollbar {
+  opacity: 0;
+}
+.chat_persons ul {
+  width: 100%;
+}
+.chat_persons li {
+  padding: 4px 10px;
+  width: 100%;
+  border-radius: 14px;
+}
+.chat_persons li:not(:last-child) {
+  margin-bottom: 4px;
+}
+.chat_persons li:nth-child(even) {
+  background: #F1F1F1;
+}
+.chat_persons li a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.chat_persons li h3 {
+  color: #3333CC;
+  font-family: "BiennaleBold";
+  font-size: 1.4em;
+  font-weight: bold;
+}
+.chat_persons li p {
+  color: #000000;
+  font-family: "BiennaleRegular";
+  max-width: 265px;
+  font-size: 1em;
+}
+.chat_persons li img {
+  border-radius: 50%;
+  width: 100px;
+  display: block;
+  aspect-ratio: 1/1;
+  height: 100px;
+}
+.chat_persons li div {
+  width: calc(100% - 110px);
+}
+.chat_actions {
+  background: #F1F1F1;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 30px 30px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6.5%;
+}
+.chat_button {
+  width: 60px;
+  height: 60px;
+  display: block;
+  padding: 10px;
+  position: relative;
+  aspect-ratio: 1/1;
+}
+.chat_button::before {
+  content: "";
+  aspect-ratio: 1/1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #3333CC;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+}
+.chat_button img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.chat_button:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+.chat_button:hover img {
+  filter: invert(100%);
+}
+
+.profile_box::-webkit-scrollbar, .explora_box::-webkit-scrollbar, .canvas_cards .card_description::-webkit-scrollbar {
+  width: 8px;
+}
+.profile_box::-webkit-scrollbar-thumb, .explora_box::-webkit-scrollbar-thumb, .canvas_cards .card_description::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  background: #30CEB3;
+}
+.profile_box::-webkit-scrollbar-track, .explora_box::-webkit-scrollbar-track, .canvas_cards .card_description::-webkit-scrollbar-track {
+  border-radius: 30px;
+  background: #CACACA;
+}
+
+.canvas_cards {
+  padding-block: 3vh 7vh;
+}
+.canvas_cards .card {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  aspect-ratio: 9/16;
+  max-height: 86vh;
+  width: min(100%, 500px);
+  border-radius: 50px;
+  overflow: hidden;
+}
+.canvas_cards .card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: calc(100% - 100px);
+  background: #EEEEEE;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  opacity: 0;
+}
+.canvas_cards .card .after {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  content: "";
+  width: 100%;
+  border-radius: 50px;
+  background: linear-gradient(75deg, #33C 0%, #000 100%);
+  background-blend-mode: multiply;
+  mix-blend-mode: multiply;
+  opacity: 0;
+  pointer-events: none;
+  display: grid;
+  place-items: center;
+}
+.canvas_cards .card #photos {
+  position: absolute;
+  width: 100%;
+  border-radius: 50px;
+  height: 100%;
+  z-index: 4;
+  background: #C4C4C4;
+  mix-blend-mode: multiply;
+  inset: 0;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.canvas_cards .card #photos img {
+  border-radius: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.canvas_cards .card #photos .to_first_view,
+.canvas_cards .card #photos button.splide__arrow {
+  opacity: 1;
+  width: 35px;
+  z-index: 10;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  height: 35px;
+  background: #ffffff;
+  align-items: center;
+  margin: 0;
+}
+.canvas_cards .card #photos .to_first_view svg,
+.canvas_cards .card #photos button.splide__arrow svg {
+  fill: #3333CC;
+  width: 20px;
+  height: 20px;
+}
+.canvas_cards .card #photos .to_first_view[disabled],
+.canvas_cards .card #photos button.splide__arrow[disabled] {
+  display: none;
+}
+.canvas_cards .card #photos .to_first_view {
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+  left: 1em;
+  z-index: 3;
+  display: none;
+}
+.canvas_cards .card #photos .to_first_view.active {
+  display: flex;
+}
+.canvas_cards .card #photos .splide__pagination {
+  width: 100%;
+  padding-inline: 6%;
+  top: 20px;
+  bottom: auto;
+  justify-content: space-between;
+}
+.canvas_cards .card #photos .splide__pagination li {
+  width: 31.25%;
+}
+.canvas_cards .card #photos .splide__pagination li button {
+  width: 100%;
+  height: 8px;
+  margin: 0;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 0;
+  opacity: 1 !important;
+  background: #ffffff;
+  transform: scale(1) !important;
+  border-radius: 40px;
+}
+.canvas_cards .card #photos .splide__pagination li button.is-active {
+  background: #EA2788;
+}
+.canvas_cards .card #photos .to_second_view {
+  opacity: 0;
+  pointer-events: none;
+  right: 1.5em;
+  border-radius: 50%;
+  bottom: -33px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 5;
+  width: 66px;
+  height: 66px;
+}
+.canvas_cards .card #photos .to_second_view img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+.canvas_cards .card_nav_inside, .canvas_cards .card_nav {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  pointer-events: all;
+  gap: 6%;
+}
+.canvas_cards .card_nav_inside a, .canvas_cards .card_nav a {
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 2px solid;
+  width: 60px;
+  height: 60px;
+}
+.canvas_cards .card_nav_inside a img, .canvas_cards .card_nav a img {
+  width: 30px;
+  height: 30px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+.canvas_cards .card_nav_inside a.share img, .canvas_cards .card_nav_inside a.close img, .canvas_cards .card_nav a.share img, .canvas_cards .card_nav a.close img {
+  width: 24px;
+  height: 24px;
+}
+.canvas_cards .card_nav_inside {
+  opacity: 0;
+  pointer-events: none;
+  z-index: 6;
+  gap: 4%;
+}
+.canvas_cards .card_nav_inside a {
+  background: #ffffff;
+  width: 66px;
+  height: 66px;
+}
+.canvas_cards .card_nav_inside a img {
+  width: 34px;
+  height: 34px;
+}
+.canvas_cards .card_content_inside, .canvas_cards .card_content {
+  width: 100%;
+  position: absolute;
+  bottom: 100px;
+  z-index: 6;
+  left: 0;
+  padding-inline: 5%;
+  opacity: 1;
+  pointer-events: all;
+  padding-bottom: 20px;
+}
+.canvas_cards .card_content_inside .i, .canvas_cards .card_content .i {
+  position: absolute;
+  top: 0;
+  right: 1.5em;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  animation: upDown 1s ease-in-out 0s infinite;
+}
+.canvas_cards .card_content_inside h2, .canvas_cards .card_content h2 {
+  color: #ffffff;
+  font-family: "BiennaleBold";
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+.canvas_cards .card_content_inside ul, .canvas_cards .card_content ul {
+  list-style: none;
+}
+.canvas_cards .card_content_inside ul li, .canvas_cards .card_content ul li {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+.canvas_cards .card_content_inside ul li:not(:last-child), .canvas_cards .card_content ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.canvas_cards .card_content_inside ul li img, .canvas_cards .card_content ul li img {
+  width: 36px;
+  height: 36px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+.canvas_cards .card_content_inside ul li p, .canvas_cards .card_content ul li p {
+  font-family: "BiennaleBook";
+  font-size: 1.3em;
+  color: #ffffff;
+}
+.canvas_cards .card .age {
+  font-family: "BiennaleLight";
+  font-weight: 100;
+  margin-left: 8px;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+.canvas_cards .card .age img {
+  width: 25px;
+  height: 25px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.canvas_cards .card_content_inside {
+  opacity: 0;
+  pointer-events: none;
+  padding-bottom: 30px;
+}
+.canvas_cards .card_content_inside h2 {
+  color: #000000;
+  font-size: 1.75em;
+}
+.canvas_cards .card_content_inside h2 span {
+  color: #3333CC;
+}
+.canvas_cards .card_content_inside ul li img {
+  width: 40px;
+  height: 40px;
+}
+.canvas_cards .card_content_inside ul li p {
+  font-size: 1.4em;
+  color: #000000;
+}
+.canvas_cards .card .tag {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 6px 10px 6px 6px;
+}
+.canvas_cards .card .tag img {
+  width: 52px;
+  height: 52px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.canvas_cards .card .tag p {
+  color: #ffffff;
+  font-family: "BiennaleLight";
+  text-align: left;
+  font-size: 1.125em;
+}
+.canvas_cards .card .tag p b {
+  font-family: "BiennaleBold";
+  display: block;
+  color: #ffffff;
+}
+.canvas_cards .card .tag.small {
+  margin-top: 12px;
+}
+.canvas_cards .card .tag.small img {
+  width: 44px;
+  height: 44px;
+}
+.canvas_cards .card .tag.small p {
+  font-size: 1em;
+}
+.canvas_cards .card_description {
+  opacity: 0;
+  pointer-events: none;
+  z-index: 3;
+  width: 99%;
+  bottom: 90px;
+  height: calc(70% - 90px);
+  overflow-y: scroll;
+  padding-block: 20px 0;
+  padding-left: 5%;
+  padding-right: 3%;
+}
+.canvas_cards .card_description h3 {
+  font-family: "BiennaleBold";
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+.canvas_cards .card_description p {
+  font-family: "BiennaleBook";
+  font-weight: 100;
+  color: #000000;
+  font-size: 0.92em;
+}
+.canvas_cards .card_description p b {
+  font-family: "BiennaleBold";
+  color: #3333CC;
+}
+.canvas_cards .card_description h4 {
+  font-family: "BiennaleBlack";
+  font-size: 1.15em;
+  display: block;
+  margin-bottom: 10px;
+}
+.canvas_cards .card_description ul {
+  list-style: none;
+}
+.canvas_cards .card_description ul li {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.canvas_cards .card_description ul.me li {
+  align-items: center;
+  gap: 14px;
+}
+.canvas_cards .card_description ul.me li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.canvas_cards .card_description ul.me li img {
+  width: 24px;
+  height: 24px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.canvas_cards .card_description ul.me li p {
+  color: #000000;
+  font-family: "BiennaleLight";
+  font-weight: 100;
+  font-size: 1em;
+}
+.canvas_cards .card_description ul.languages li {
+  align-items: flex-start;
+  gap: 12px;
+}
+.canvas_cards .card_description ul.languages li:not(:last-child) {
+  margin-bottom: 20px;
+}
+.canvas_cards .card_description ul.languages li b {
+  color: #000000;
+}
+.canvas_cards .card_description ul.languages li img {
+  width: 39px;
+  height: 39px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+.canvas_cards .card_description .hr {
+  width: 100%;
+  height: 1px;
+  background: #000000;
+  margin-block: 10px;
+}
+.canvas_cards .card:not(.informed) .card_nav {
+  opacity: 0;
+  pointer-events: none;
+}
+.canvas_cards .card:not(.informed) .card_content {
+  opacity: 0;
+  pointer-events: none;
+}
+.canvas_cards .card:not(.informed) .card_nav_inside {
+  opacity: 1;
+  pointer-events: all;
+}
+.canvas_cards .card:not(.informed) .after {
+  height: 100%;
+}
+.canvas_cards .card.informed .after,
+.canvas_cards .card.informed #photos {
+  height: calc(100% - 100px);
+}
+.canvas_cards .card.informed .to_first_view {
+  display: none !important;
+}
+.canvas_cards .card.extended #photos {
+  height: 50%;
+}
+.canvas_cards .card.extended::before {
+  opacity: 1;
+}
+.canvas_cards .card.extended .card_content_inside, .canvas_cards .card.extended .card_nav {
+  opacity: 1;
+  pointer-events: all;
+}
+.canvas_cards .card.extended .card_nav_inside {
+  opacity: 0;
+  pointer-events: none;
+}
+.canvas_cards .card.extended #photos img {
+  -o-object-position: top;
+     object-position: top;
+}
+.canvas_cards .card.extended #photos .to_second_view {
+  opacity: 1;
+  pointer-events: all;
+}
+.canvas_cards .card.more #photos {
+  height: 30%;
+}
+.canvas_cards .card.more #photos::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 5;
+}
+.canvas_cards .card.more #photos .to_first_view,
+.canvas_cards .card.more #photos .splide__arrows {
+  display: none;
+}
+.canvas_cards .card.more #photos img {
+  -o-object-position: center;
+     object-position: center;
+}
+.canvas_cards .card.more #photos .to_second_view {
+  transform: rotate(180deg);
+  width: 56px;
+  height: 56px;
+  right: 2em;
+  bottom: -23px;
+}
+.canvas_cards .card.more::before {
+  height: calc(100% - 50px);
+}
+.canvas_cards .card.more .card_nav, .canvas_cards .card.more .card_content_inside {
+  opacity: 0;
+  pointer-events: none;
+}
+.canvas_cards .card.more .card_nav_inside, .canvas_cards .card.more .card_description {
+  opacity: 1;
+  pointer-events: all;
+}
+.canvas_cards .card.liked .after {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@keyframes upDown {
+  0% {
+    transform: translate(0);
+  }
+  33% {
+    transform: translateY(-6px);
+  }
+  66% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact_box {
+  height: 96%;
+  width: 100%;
+  max-width: 789px;
+  margin-inline: auto;
+  border-radius: 63px;
+  background: linear-gradient(180deg, #33C 0%, #000 100%);
+  padding: 2.5rem 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  justify-content: center;
+  align-items: center;
+}
+.contact_box > div {
+  width: 100%;
+}
+.contact_box_head h2 {
+  font-family: "BiennaleBlack";
+  color: #30CEB3;
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+.contact_box_head p {
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.1em;
+  font-family: "BiennaleRegular";
+  font-weight: 100;
+}
+.contact_box_head p b {
+  font-family: "BiennaleBold";
+}
+.contact_box_head p:not(:last-child) {
+  margin-bottom: 20px;
+}
+.contact_box_body form {
+  width: 100%;
+}
+.contact_box_body form div {
+  position: relative;
+  padding-top: 33px;
+}
+.contact_box_body form div:not(:last-child) {
+  margin-bottom: 14px;
+}
+.contact_box_body form div label, .contact_box_body form div p {
+  position: absolute;
+  top: 47px;
+  font-size: 1.2em;
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+.contact_box_body form div label {
+  left: 18px;
+  font-family: "BiennaleBold";
+  color: #3333CC;
+  z-index: 3;
+}
+.contact_box_body form div p {
+  font-family: "BiennaleLight";
+  left: 50%;
+  opacity: 0;
+}
+.contact_box_body form div textarea, .contact_box_body form div input {
+  outline: none;
+  min-height: 54px;
+  display: block;
+  padding-inline: 18px;
+  font-family: "BiennaleRegular";
+  width: 100%;
+  border: none;
+  background: #ffffff;
+  border-radius: 32px;
+  font-size: 1.2em;
+  position: relative;
+}
+.contact_box_body form div textarea {
+  resize: none;
+}
+.contact_box_body form div.active label {
+  top: 0;
+  left: 0;
+  color: #30CEB3;
+  transform: none;
+}
+.contact_box_body form div.active textarea {
+  min-height: 100px;
+  padding-block: 16px;
+}
+.contact_box_body form div.active p {
+  right: auto;
+  left: 24px;
+  opacity: 1;
+}
+.contact_box_body form div.writed p {
+  display: none;
+}
+.contact_box_body button,
+.contact_box_body [type=submit] {
+  display: block;
+  text-align: center;
+  background: #30CEB3;
+  border: 1px solid #30CEB3;
+  border-radius: 50px;
+  color: #ffffff;
+  padding: 12px 36px;
+  font-family: "BiennaleBold";
+  font-size: 1.25em;
+  cursor: pointer;
+  margin: 20px auto 0;
+}
+.contact_box_body button:hover,
+.contact_box_body [type=submit]:hover {
+  background: transparent;
+  color: #30CEB3;
+}
+
+.portafolio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.portafolio_box {
+  height: 91vh;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+.portafolio_tabs {
+  padding-bottom: 10px;
+  width: 90%;
+  margin: 0 auto;
+  border-bottom: 1px solid #000000;
+  height: 71px;
+}
+.portafolio_tabs ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  list-style: none;
+}
+.portafolio_tabs ul button {
+  border: none;
+  cursor: pointer;
+  background: #F1F1F1;
+  color: #000000;
+  font-family: "BiennaleBold";
+  font-size: 1.7em;
+  width: 200px;
+  height: 60px;
+  border-radius: 40px;
+}
+.portafolio_tabs ul button.active {
+  color: #ffffff;
+  background: #3333CC;
+}
+.portafolio_content {
+  padding-top: 20px;
+  width: 100%;
+  height: calc(100% - 71px);
+}
+.portafolio_content div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px 4%;
+  overflow-y: scroll;
+  height: 100%;
+}
+.portafolio_content div::-webkit-scrollbar {
+  display: none;
+}
+.portafolio_content div img {
+  width: 100%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+}
+
+.explora {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.explora_box {
+  width: 100%;
+  height: 100%;
+  max-width: 1020px;
+  margin-inline: auto;
+  max-height: 80vh;
+  overflow-y: scroll;
+  padding-right: 20px;
+}
+
+.banner {
+  width: 100%;
+  min-height: 350px;
+  height: 40vh;
+  background: #ffffff;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+}
+.banner > div {
+  width: 100%;
+  height: 100%;
+}
+.banner_front {
+  position: absolute;
+  opacity: 1;
+  z-index: 3;
+  background: url(../img/banner.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.4s ease-in;
+  transition-delay: 0.4s;
+}
+.banner_front h1 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50px;
+  transition: all 0.4s ease-in;
+  font-family: "BiennaleHeavyit";
+  color: #ffffff;
+  opacity: 1;
+  font-size: 3.5em;
+  line-height: 1.2em;
+  text-shadow: 0px 8.4830913544px 8.4830913544px rgba(0, 0, 0, 0.25);
+}
+.banner_back {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5vh;
+}
+.banner .splide__slide {
+  display: flex;
+  align-items: center;
+}
+.banner .splide img {
+  width: 100%;
+  max-height: 80px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+.banner:hover .banner_front {
+  opacity: 0;
+}
+.banner:hover .banner_front h1 {
+  opacity: 0;
+  left: -200px;
+}
+
+.recomendaciones {
+  width: 100%;
+}
+.recomendaciones > div {
+  width: 100%;
+}
+.recomendaciones_txt {
+  padding-block: 10px 20px;
+}
+.recomendaciones_txt h2 {
+  font-family: "BiennaleBold";
+}
+.recomendaciones_txt p {
+  font-size: 1.2em;
+  font-family: "BiennaleRegular";
+}
+.recomendaciones_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px 4%;
+}
+
+.comment {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+}
+.comment > div {
+  width: 100%;
+}
+.comment_front {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  pointer-events: none;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.comment_front p {
+  font-family: "BiennaleRegular";
+  color: #ffffff;
+  text-align: center;
+}
+.comment_user div {
+  display: block;
+  width: 60px;
+  margin: 0 auto;
+  height: 60px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: #ffffff;
+  margin-bottom: 7px;
+}
+.comment_user div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+.comment_user p {
+  font-family: "BiennaleBold";
+}
+.comment_back img {
+  width: 100%;
+}
+.comment:hover .comment_front {
+  opacity: 1;
+  pointer-events: all;
+}
+.profile_container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.profile_container_nav {
+  background: white;
+  position: absolute;
+  bottom: 0;
+  padding-block: 10px 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  gap: 30px;
+}
+.profile_container_nav a {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  padding: 10px;
+  border: 2px solid;
+  display: grid;
+  place-items: center;
+}
+.profile_container_nav a img {
+  width: 37px;
+  height: 37px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+.profile_container_nav a.close img {
+  width: 30px;
+  height: 30px;
+}
+
+.profile_box {
+  width: 100%;
+  height: 100%;
+  max-width: 1100px;
+  margin-inline: auto;
+  max-height: 74vh;
+  overflow-y: scroll;
+  padding-right: 20px;
+}
+.profile_box > div {
+  width: 100%;
+  display: grid;
+}
+.profile_box h1, .profile_box h2 {
+  font-family: "BiennaleBold";
+  font-weight: bold;
+}
+.profile_box h1 {
+  font-size: 2.25em;
+}
+.profile_box h2 {
+  font-size: 2em;
+}
+.profile_box .age {
+  margin-left: 20px;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 12px;
+  font-family: "BiennaleLight";
+  color: #3333CC;
+}
+.profile_box .age img {
+  width: 30px;
+  height: 30px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+.profile_box_header {
+  grid-template-columns: 0.8fr 1.2fr;
+  grid-gap: 5%;
+  align-items: center;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #3333CC;
+}
+.profile_box_header .col:nth-child(1) img {
+  width: 100%;
+}
+.profile_box_header .col:nth-child(2) ul {
+  margin-block: 10px 20px;
+}
+.profile_box_header .col:nth-child(2) ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.profile_box_header .col:nth-child(2) ul li img {
+  width: 34px;
+  height: 34px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+.profile_box_header .col:nth-child(2) ul li:not(:last-child) {
+  margin-bottom: 14px;
+}
+.profile_box_header .col:nth-child(2) ul li p {
+  font-family: "BiennaleLight";
+  font-size: 1.4em;
+}
+.profile_box_header .col:nth-child(2) .w-100, .profile_box_header .col:nth-child(2) .wh-100 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.profile_box_header .tag {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 6px 10px 6px 6px;
+  border-radius: 10px;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 8px;
+}
+.profile_box_header .tag img {
+  width: 53px;
+  height: 53px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+.profile_box_header .tag p {
+  color: #ffffff;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  font-family: "BiennaleLight";
+}
+.profile_box_header .tag p strong, .profile_box_header .tag p b {
+  display: block;
+  font-family: "BiennaleBold";
+}
+.profile_box_body {
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5%;
+}
+.profile_box_body .col {
+  width: 100%;
+}
+.profile_box_body .col:nth-child(1) h2 {
+  color: #30CEB3;
+}
+.profile_box_body .col:nth-child(2) h2 {
+  color: #EA2788;
+}
+.profile_box_body .col_title {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.profile_box_body .col p, .profile_box_body .col li {
+  font-family: "BiennaleLight";
+  font-size: 1.1em;
+}
+.profile_box_body .col p:not(:last-child) {
+  margin-bottom: 12px;
+}
+.profile_box_body .col ol, .profile_box_body .col ul {
+  list-style: disc;
+  margin-left: 21px;
+}
+.profile_box_body .col ol li, .profile_box_body .col ul li {
+  list-style: disc;
+}
+.profile_box_body .col strong, .profile_box_body .col b {
+  color: #3333CC;
+  font-family: "BiennaleBold";
+}
+.profile_box_body .col .tags {
+  display: flex;
+  gap: 6px 10px;
+  margin-bottom: 26px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.profile_box_body .col .tags span {
+  width: 160px;
+  padding-inline: 8px;
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  font-family: "BiennaleBold";
+  background: linear-gradient(90deg, #33C 0%, #1B1B6C 47.85%, #000 100%);
+  line-height: 1.2em;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+}
+.profile_box_body .col .lngs ul, .profile_box_body .col .lngs li {
+  list-style: none;
+  margin: 0;
+}
+.profile_box_body .col .lngs li {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 16px;
+}
+.profile_box_body .col .lngs li img {
+  max-width: 46px;
+}
+.profile_box_body .col .lngs li:not(:last-child) {
+  margin-bottom: 28px;
+}
+.profile_box_body .col .lngs li b {
+  color: #000000;
+}/*# sourceMappingURL=style.css.map */
