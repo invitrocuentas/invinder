@@ -15,15 +15,15 @@
                 <img src="img/invinder-color.png">
             </div>
         </header>
-        <main>
+        <main class="localizador">
             <div class="contenedor">
                 <h1>¿Usted es?</h1>
                 <div class="choose">
-                    <a class="option" href="invinder.php">
+                    <a class="option" href="invinder-1.php">
                         <img src="img/option1.png">
                         <h2>Emprendedor</h2>
                     </a>
-                    <a class="option" href="invinder.php">
+                    <a class="option" href="invinder-1.php">
                         <img src="img/option2.png">
                         <h2>Empresa<br>formal</h2>
                     </a>

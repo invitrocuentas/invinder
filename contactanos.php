@@ -20,10 +20,10 @@
                     <p>Bríndanos tus datos para ponerte en contacto con tu Match soñado y <b>no dejemos para más tarde lo que puede ser hoy.</b></p>
                 </div>
                 <div class="contact_box_body">
-                    <form action="" class="cf">
+                    <form class="cf" method="post" action="contacto.php">
                         <div>
                             <label for="">Nombres y apellidos</label>
-                            <input type="text" name="nombres" required>
+                            <input type="text" name="nombre" required>
                             <p>Escribe aquí</p>
                         </div>
                         <div>
@@ -38,7 +38,7 @@
                         </div>
                         <div>
                             <label for="">Descripción de tu empresa</label>
-                            <textarea name="descripcion"></textarea>
+                            <textarea name="descripcion" required></textarea>
                             <p>Escribe aquí</p>
                         </div>
                         <button type="submit">Enviar</button>

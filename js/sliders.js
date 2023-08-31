@@ -6,7 +6,12 @@ if(document.querySelector('#logos1')){
         gap: '1.1rem',
         direction: 'ltr',
         arrows: false,
-        pagination: false
+        pagination: false,
+        breakpoints: {
+            1150: {
+                perPage: 4
+            },
+        }
     }).mount(window.splide.Extensions);
 
     new Splide( '#logos2', {
@@ -16,7 +21,12 @@ if(document.querySelector('#logos1')){
         direction: 'rtl',
         gap: '1.1rem',
         arrows: false,
-        pagination: false
+        pagination: false,
+        breakpoints: {
+            1150: {
+                perPage: 4
+            },
+        }
     }).mount(window.splide.Extensions);
 }
 
@@ -32,6 +42,11 @@ if(document.querySelector('#matchs')){
         pagination: false,
         padding: {
             right: '20%'
+        },
+        breakpoints: {
+            1150: {
+                perPage: 2,
+            }
         }
     }).mount();
 }
@@ -145,4 +160,26 @@ if(document.querySelector('form.cf')){
             return;
         }
     }
+}
+
+if(document.querySelector('.like')){
+    let likeButtons = Array.from(document.querySelectorAll('.like'))
+    likeButtons.forEach(button=>{
+        button.addEventListener('click', (e)=>{
+            e.preventDefault();
+            document.querySelector('.card').classList.add('liked')
+
+            setTimeout(() => {
+                window.location.href = 'contactanos.php';
+            }, 4000);
+
+        })
+    })
+}
+
+if(document.querySelector('.nav_mobile')){
+    document.querySelector('.nav_mobile_opener').addEventListener('click', (e)=>{
+        e.preventDefault();
+        document.querySelector('.nav_mobile').classList.toggle('active')
+    })
 }
