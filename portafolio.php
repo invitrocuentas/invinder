@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="libraries/animate.min.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="libraries/splide.min.css">
-    <title>Document</title>
+    <title>InVinder</title>
 </head>
 <body>
     
@@ -18,7 +20,7 @@
                     <ul>
                         <li><button>3 likes</button></li>
                         <li><button class="active">Portafolio</button></li>
-                        <li><button>Favoritos</button></li>
+                        <!--<li><button>Favoritos</button></li>-->
                     </ul>
                 </div>
                 <div class="portafolio_content">
