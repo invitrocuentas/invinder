@@ -17,6 +17,23 @@
     <div class="invinder wh-100vh relative two-cols">
         <?php include_once './inc/aside.php'; ?>
         <main class="profile_container">
+<<<<<<< HEAD
+=======
+            <div class="profile_container_nav">
+                <a href="perfil-5.php" class="share" style="border-color:#EA2788;">
+                    <img src="img/icon/share.png">
+                </a>
+                <a href="perfil-2.php" class="close" style="border-color:#3333CC">
+                    <img src="img/icon/close.png">
+                </a>
+                <a href="#" style="border-color:#F2A933">
+                    <img src="img/icon/star.png">
+                </a>
+                <a href="#" style="border-color:#30CEB3" class="big_like">
+                    <img src="img/icon/heart.png">
+                </a>
+            </div>
+>>>>>>> 8b0ddedae2c7638fb6fe15a2cd721ca56db9a5fa
             <div class="profile_box">
                 <div class="after">
                     <img src="img/match.gif">
