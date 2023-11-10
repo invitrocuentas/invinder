@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="libraries/animate.min.css">
     <link rel="stylesheet" href="libraries/splide.min.css">
-    <title>Document</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <title>InVinder</title>
 </head>
 <body>
 

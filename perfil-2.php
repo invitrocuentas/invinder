@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="libraries/animate.min.css">
     <link rel="stylesheet" href="libraries/splide.min.css">
-    <title>Document</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <title>InVinder</title>
 </head>
 <body>
 
@@ -15,21 +17,10 @@
     <div class="invinder wh-100vh relative two-cols">
         <?php include_once './inc/aside.php'; ?>
         <main class="profile_container">
-            <div class="profile_container_nav">
-                <a href="#" class="share" style="border-color:#EA2788;">
-                    <img src="img/icon/share.png">
-                </a>
-                <a href="#" class="close" style="border-color:#3333CC">
-                    <img src="img/icon/close.png">
-                </a>
-                <a href="#" style="border-color:#F2A933">
-                    <img src="img/icon/star.png">
-                </a>
-                <a href="#" style="border-color:#30CEB3">
-                    <img src="img/icon/heart.png">
-                </a>
-            </div>
             <div class="profile_box">
+                <div class="after">
+                    <img src="img/match.gif">
+                </div>
                 <div class="profile_box_header">
                     <div class="col">
                         <img src="img/messages/person2.png">
@@ -85,6 +76,20 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="profile_container_nav">
+                <a href="perfil-1.php" class="share" style="border-color:#EA2788;">
+                    <img src="img/icon/share.png">
+                </a>
+                <a href="perfil-3.php" class="close" style="border-color:#3333CC">
+                    <img src="img/icon/close.png">
+                </a>
+                <a href="#" style="border-color:#F2A933">
+                    <img src="img/icon/star.png">
+                </a>
+                <a href="#" style="border-color:#30CEB3" class="big_like">
+                    <img src="img/icon/heart.png">
+                </a>
             </div>
         </main>
     </div>

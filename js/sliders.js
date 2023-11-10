@@ -177,6 +177,23 @@ if(document.querySelector('.like')){
     })
 }
 
+if(document.querySelector('.big_like')){
+    
+    let likeButton = document.querySelector('.big_like')
+    
+    likeButton.addEventListener('click', (e)=>{
+        e.preventDefault();
+        let div = document.querySelector('.profile_box')
+        div.scrollTop = 0;
+        div.classList.add('liked');
+        
+        setTimeout(() => {
+            window.location.href = 'contactanos.php';
+        }, 4000);
+        
+    })
+}
+
 if(document.querySelector('.nav_mobile')){
     document.querySelector('.nav_mobile_opener').addEventListener('click', (e)=>{
         e.preventDefault();

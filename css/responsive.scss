@@ -1,0 +1,114 @@
+@media (max-width: 1460px) and (min-width: 1400px) and (min-height: 680px){
+    .tracker main .option{
+        max-width: 330px !important;
+    }
+    .tracker main .option h2{
+        font-size: 1.6em !important;
+    }
+    .tracker main .choose{
+        margin-top: 4vh;
+        min-height: 435px !important;
+    }
+
+    .canvas_cards .card{
+        width: min(100%, 385px) !important;
+    }
+    .canvas_cards .card_content_inside ul li img, .canvas_cards .card_content ul li img{
+        width: 24px !important;
+        height: 24px !important;
+    }
+    .canvas_cards .card_content_inside ul li p, .canvas_cards .card_content ul li p{
+        font-size: 17px !important;
+    }
+    .canvas_cards .card_content_inside h2, .canvas_cards .card_content h2{
+        font-size: 22px !important;
+        margin-bottom: 12px !important;
+    }
+    .canvas_cards .card #photos .splide__pagination li button{
+        height: 5px !important;
+    }
+    .canvas_cards .card .tag{
+        margin-top: 10px !important;
+    }
+    .canvas_cards .card_content_inside ul li:not(:last-child), .canvas_cards .card_content ul li:not(:last-child){
+        margin-bottom: 5px !important;
+    }
+    .canvas_cards .card_content_inside{
+        padding-bottom: 20px !important;
+    }
+    .canvas_cards .card .tag img{
+        width: 40px !important;
+        height: 40px !important;
+    }
+    .canvas_cards .card .tag p{
+        font-size: 14px !important;
+    }
+}
+@media (max-height: 730px){
+    .contact_box{
+        gap: 2.5vh !important;
+        &_head{
+            p{
+                font-size: 16px !important;
+            }
+        }
+    }
+    .contact_box_body form div label, .contact_box_body form div p{
+        font-size: 15px !important;
+        top: 38px !important;
+    }
+    .contact_box_body form div.active label{
+        top: 0 !important;
+    }
+    .contact_box_body form div textarea, .contact_box_body form div input{
+        min-height: 50px !important;
+    }
+    .contact_box_body form div{
+        padding-top: 24px !important;
+    }
+    .contact_box_body form div:not(:last-child) {
+        margin-bottom: 10px !important;
+    }
+    .contact_box_head h2{
+        font-size: 2em !important;
+    }
+}
+
+
+@media (max-width: 1660px) and (min-width: 1540px) and (min-height: 750px){
+    .canvas_cards{
+        height: 100vh !important;
+        padding-block: 0 !important;
+    }
+    .canvas_cards .card_content_inside ul li img{
+        width: 34px !important;
+        height: 34px !important;
+    }
+    .canvas_cards .card_content_inside ul li p{
+        font-size: 20px !important;
+    }
+    .canvas_cards .card_content_inside h2{
+        font-size: 25px !important;
+        margin-bottom: 14px !important;
+    }
+    .canvas_cards .card .tag{
+        margin-top: 14px !important;
+    }
+}
+
+@media (max-width: 435px){
+  .profile_container_nav{
+    a{
+        width: 50px !important;
+        height: 50px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+
+        img{
+            height: 80% !important;
+        }
+
+    }
+  }
+}

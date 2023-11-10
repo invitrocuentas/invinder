@@ -1,3 +1,4 @@
+@import "responsive.css";
 @font-face {
   font-family: "BiennaleHeavyit";
   src: url(../fonts/Biennale-Heavyit.otf);
@@ -824,6 +825,31 @@ body, html {
   left: 50%;
   transform: translate(-50%, -50%) scale(0.1);
 }
+@media (max-width: 880px){
+  .chat_button{
+    position: relative;
+  }
+  .chat_button:hover p{
+    color: white;
+  }
+  .chat_button::before {
+    content: "";
+    aspect-ratio: 1/1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: #3333CC;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    padding: 2%;
+  }
+  .chat_button p{
+    position: relative;
+  }
+}
 .chat_button img {
   width: 100%;
   height: 100%;
@@ -887,9 +913,9 @@ body, html {
   content: "";
   width: 100%;
   border-radius: 50px;
-  background: linear-gradient(75deg, #33C 0%, #000 100%);
-  background-blend-mode: multiply;
-  mix-blend-mode: multiply;
+  background: linear-gradient(75deg, #3333cca6 0%, #000 100%);
+  /*background-blend-mode: multiply;
+  mix-blend-mode: multiply;*/
   opacity: 0;
   pointer-events: none;
   display: grid;
@@ -1891,11 +1917,13 @@ body, html {
 .profile_container {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
   position: relative;
 }
 .profile_container_nav {
-  background: white;
-  position: absolute;
+  /* background: white; */
+  /* position: absolute; */
   bottom: 0;
   padding-block: 10px 20px;
   display: flex;
@@ -1932,8 +1960,36 @@ body, html {
   max-width: 1100px;
   margin-inline: auto;
   max-height: 74vh;
+  position: relative;
   overflow-y: scroll;
-  padding-right: 20px;
+  padding: 12px 20px 12px 12px;
+}
+.profile_box.liked{
+  overflow: hidden;  
+}
+.profile_box .after{
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  background: linear-gradient(75deg, #33C 0%, #000 100%);
+  background-blend-mode: multiply;
+  mix-blend-mode: multiply;
+  display: grid;
+  place-items: center;
+  transition: all 0.2s ease;
+}
+.profile_box.liked .after{
+  opacity: 1;
+  pointer-events: all;
+}
+.profile_box .after img{
+  color: white;
+  width: 100%;
+  max-width: 380px;
 }
 .profile_box > div {
   width: 100%;
@@ -2168,4 +2224,17 @@ body, html {
 }
 .profile_box_body .col .lngs li b {
   color: #000000;
-}/*# sourceMappingURL=style.css.map */
+}
+@media (min-width: 1200px) and (max-height: 930px){
+  .chat{
+    position: relative;
+    grid-template-rows: 100px 1fr;
+  }
+  .chat_actions{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: auto !important;
+    padding-block: 10px;
+  }
+}

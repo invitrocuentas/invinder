@@ -69,7 +69,7 @@
                         </li>
                         <li>
                             <a href="perfil-5.php">
-                                <img src="img/messages/person4.png">
+                                <img src="img/messages/person5.png">
                                 <div>
                                     <h3>Markt Canales</h3>
                                     <p>¡Da a conocer tu marca y ábrete paso en el mundo digital!</p>
